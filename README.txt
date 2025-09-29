@@ -1,4 +1,4 @@
-# 👟 Urban_Step – Site vitrine e-commerce (démo statique)
+#👟 Urban_Step – Site vitrine e-commerce (démo statique)
 
 **Urban_Step** est un site vitrine statique destiné à présenter une galerie d’articles de sport (chaussures, vêtements, accessoires) et à proposer un formulaire de contact accessible.  
 Les visiteurs peuvent **acheter directement via Vinted** grâce aux boutons présents sur chaque card produit.  
