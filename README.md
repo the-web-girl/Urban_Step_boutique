@@ -8,32 +8,33 @@ Le projet met l’accent sur l’**accessibilité numérique** (WCAG / RGAA), la
 
 ## 📂 Structure du projet
 
-├── index.html # Page d'accueil (galerie produits, avis clients, etc.)
-├── contact.html # Page de contact avec formulaire accessible
+```bash
+├── index.html              # Page d'accueil (galerie produits, avis clients, etc.)
+├── contact.html            # Page de contact avec formulaire accessible
 │
-├── assets/ # Images et visuels produits (PNG, JPG, WebP, SVG, logos)
+├── assets/                 # Images et visuels produits (PNG, JPG, WebP, SVG, logos)
 │
 ├── js/
-│ └── main.js # Script principal (navigation mobile, interactions, formulaire)
+│   └── main.js             # Script principal (navigation mobile, interactions, formulaire)
 │
 ├── style/
-│ ├── styles.css # CSS compilé pour le site
-│ ├── styles.css.map # Sourcemap généré automatiquement
-│ ├── styles.scss # SCSS principal (point d'entrée)
-│ │
-│ ├── components/ # Composants SCSS réutilisables
-│ │ ├── _header.scss
-│ │ ├── _footer.scss
-│ │ ├── _buttons.scss
-│ │ └── ...etc
-│ │
-│ └── utils/ # Outils SCSS (variables, mixins, helpers)
-│ ├── _variables.scss
-│ ├── _mixins.scss
-│ └── ...etc
+│   ├── styles.css          # CSS compilé pour le site
+│   ├── styles.css.map      # Sourcemap généré automatiquement
+│   ├── styles.scss         # SCSS principal (point d'entrée)
+│   │
+│   ├── components/         # Composants SCSS réutilisables
+│   │   ├── _header.scss
+│   │   ├── _footer.scss
+│   │   ├── _buttons.scss
+│   │   └── ...etc
+│   │
+│   └── utils/              # Outils SCSS (variables, mixins, helpers)
+│       ├── _variables.scss
+│       ├── _mixins.scss
+│       └── ...etc
 │
-└── README.md # Documentation du projet
-
+└── README.md               # Documentation du projet
+```
 
 ---
 
@@ -70,31 +71,30 @@ Le projet met l’accent sur l’**accessibilité numérique** (WCAG / RGAA), la
 1. **Téléchargement du projet**
    ```bash
    git clone https://github.com/ton-projet/urban_step.git
+   ```
 
 2. **Ouverture locale**
-   - Ouvrez index.html dans votre navigateur.
+   - Ouvrez `index.html` dans votre navigateur.
    - Aucun serveur ni build n’est nécessaire.
 
 3. **Optionnel : Compilation SCSS**
-   - Pour personnaliser les styles, compilez les fichiers .scss en .css avec Sass :
+   Pour personnaliser les styles, compilez les fichiers `.scss` en `.css` avec Sass :
+   ```bash
    # Installer Sass si nécessaire
-    npm install -g sass
+   npm install -g sass
 
-    # Compiler avec watch
-    sass style/styles.scss style/styles.css --watch
+   # Compiler avec watch
+   sass style/styles.scss style/styles.css --watch
+   ```
 
 ---
 
 ## 🔧 Technologies utilisées
 
 - HTML5 (sémantique, ARIA)
-
 - SCSS / CSS3 (architecture modulaire, variables, mixins)
-
 - JavaScript Vanilla (navigation mobile, interactions, validation formulaire)
-
 - Font Awesome (icônes sociales et décoratives)
-
 - Images optimisées (JPG, PNG, WebP)
 
 ---
@@ -102,20 +102,15 @@ Le projet met l’accent sur l’**accessibilité numérique** (WCAG / RGAA), la
 ## 📌 Points forts du projet
 
 - Démonstration d’un mini-site e-commerce statique
-
 - Boutons d’achat direct vers Vinted intégrés dans les cards produits
-
 - Respect des bonnes pratiques d’accessibilité (WCAG/RGAA)
-
 - Code organisé et modulaire (SCSS en composants + utils)
-
 - Design responsive adapté desktop, tablette, mobile
-
 - Facile à maintenir et à faire évoluer
 
 ---
 
 ### 📄 Licence
 
-© 2025 – Créé par IntA11Y - Solutions
+© 2025 – Créé par IntA11Y - Solutions  
 Tous droits réservés.
