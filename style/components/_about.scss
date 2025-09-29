@@ -1,0 +1,37 @@
+.about {
+    // background-color: pink;
+
+    .row {
+        display: flex;
+        align-items: center;
+        background-color: var(--black);
+        flex-wrap: wrap;
+
+        .image {
+            flex: 1 1 45rem;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .content {
+            flex: 1 1 45rem;
+            padding: 2rem;
+
+            h3 {
+                font-size: 3rem;
+                color: var(--white);
+                margin: 0 auto 3rem;
+            }
+
+            p {
+                font-size: 1.6rem;
+                color:#ccc;
+                padding:1rem 0;
+                line-height: 1.8;
+                margin: 0 auto 2rem;
+            }
+        }
+    }
+}

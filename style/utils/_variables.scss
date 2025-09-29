@@ -1,0 +1,38 @@
+:root {
+    --main-color:#d3ad7f;
+    --main-dark:#241b0f;
+    --white: #ffffff;
+    --black:#13131a;
+    --bg:#010103;
+    --border:.1rem solid rgba(255,255,255,.3);
+}
+
+*, ::before, ::after {
+    margin:0; 
+    padding:0;
+    box-sizing: border-box;
+    
+    text-transform: capitalize;
+    transition: 0.2s linear;
+}
+
+html {
+    font-family: 'Roboto', sans-serif;
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+    width: .8rem;
+}
+
+html::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: #fff;
+    border-radius: 5rem;
+}

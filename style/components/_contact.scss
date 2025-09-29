@@ -1,0 +1,84 @@
+.container {
+    max-width: 1100px;
+    height: 80vh;
+    margin: 0 auto;
+    padding: 1rem;
+
+    .contact-section {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin: 100px auto;
+
+        h1 {
+          font-size: 4.5rem;
+          color: var(--white);  
+          text-align: center;
+          align-content: center;
+        }
+
+        h2 {
+            height: 80px;
+            text-align: center;
+            align-content: center;
+            color: var(--white);
+            font-size: 3rem;
+        }
+
+        .contact-form {
+            height: 100%;
+            width: 80%;
+            margin: 5%;
+
+            .form-row {
+                margin-bottom: 1.5rem;
+                display: flex;
+                flex-direction: column;
+                
+                label {
+                    color: var(--white);
+                    font-size: 1.6rem;
+                }
+
+                input {
+                    outline: 2px solid var(--main-color);
+                    
+                    &:hover, &:focus, &:active {
+                        outline-offset: 2px;
+                        outline: 2px dotted var(--main-color);
+                    }
+                }
+
+                textarea {
+                    outline: 2px solid var(--main-color);
+
+                    // &:hover {
+                    //     outline-offset: 2px;
+                    // }
+
+                    &:active, &:focus, &:active {
+                        outline-offset: 2px;
+                        outline: 2px dotted var(--main-color);
+                    }
+
+                }
+
+                button {
+                    width: 50%;
+                    height: 4rem;
+                    font-size: 2rem;
+                    outline: 2px solid var(--main-color);
+                    margin: 0 auto;
+
+                    &:hover {
+                        outline: 2px dotted var(--main-color);
+                        outline-offset: 5px;
+                    }
+                }
+            }
+        }
+
+    }
+}

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact — Urban_Step</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <style>
+    :root{
+      --main-color:#8168ff;
+      --bg:#010103;
+      --text:#ffffff;
+      --muted:#c7c7c7;
+    }
+    *{box-sizing:border-box}
+    html{font-size:62.5%}
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--text);
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      line-height:1.5;
+      font-size:1.6rem;
+    }
+    /* Visually hidden */
+    .visually-hidden{
+      position:absolute!important;
+      width:1px;height:1px;
+      padding:0;margin:-1px;
+      overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0
+    }
+    /* Skip link */
+    .skip-link{
+      position:absolute;left:-9999px;top:auto;
+      background:#fff;color:#000;padding:.6rem 1rem;border-radius:.6rem;
+      outline:2px solid #000;
+    }
+    .skip-link:focus{left:1rem;top:1rem;z-index:1002}
+    /* Focus visible */
+    a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible{
+      outline:2px solid var(--main-color);
+      outline-offset:3px;
+    }
+    /* Header & nav */
+    .header{
+      display:flex;align-items:center;justify-content:space-between;
+      padding:1rem 2rem;position:sticky;top:0;background:rgba(1,1,3,.8);backdrop-filter:saturate(120%) blur(6px);
+    }
+    .logo{color:var(--text);text-decoration:none;font-weight:700}
+    .navbar a{
+      color:var(--text);text-decoration:none;margin-left:1.6rem
+    }
+    .navbar a[aria-current="page"]{border-bottom:2px solid var(--main-color)}
+    /* Burger */
+    .burger-menu{
+      width:44px;height:44px;display:none;align-items:center;justify-content:center;
+      background:none;border:0;color:var(--text);cursor:pointer;border-radius:.8rem
+    }
+    .burger-line{display:block;width:24px;height:2px;background:currentColor;margin:4px 0}
+    /* Mobile nav & overlay */
+    .overlay{position:fixed;inset:0;background:rgba(0,0,0,.6);backdrop-filter:blur(2px)}
+    .mobile-nav{
+      position:fixed;right:0;top:0;bottom:0;width:min(90vw,360px);
+      background:#0c0c12;padding:2rem;box-shadow:0 0 0 1px rgba(255,255,255,.06);
+    }
+    .mobile-nav ul{list-style:none;margin:0;padding:0}
+    .mobile-nav a{display:block;padding:1.2rem 0;color:var(--text);text-decoration:none}
+    /* Layout */
+    .container{max-width:1100px;margin:0 auto;padding:2rem 1.6rem;min-height:60vh}
+    h1{font-size:3rem;margin:1rem 0 2rem}
+    h2{font-size:2.2rem;margin:2.4rem 0 1rem}
+    p, label, input, textarea{font-size:1.6rem}
+    /* Form */
+    .form-row{display:flex;flex-direction:column;margin-bottom:1.2rem}
+    label{margin-bottom:.4rem}
+    input, textarea{
+      background:#0e0e15;border:1px solid rgba(255,255,255,.15);
+      color:var(--text);padding:1rem;border-radius:.8rem
+    }
+    .form-help{color:var(--muted);margin:.4rem 0 0}
+    .error-text{color:#ffb4b4;font-size:1.4rem}
+    input[aria-invalid="true"], textarea[aria-invalid="true"]{outline:2px solid #ff6b6b}
+    /* Buttons */
+    .btn-primary{
+      display:inline-block;border:0;border-radius:.8rem;padding:1rem 1.6rem;
+      background:var(--main-color);color:#000;font-weight:600;cursor:pointer
+    }
+    .btn-primary:hover{filter:brightness(1.05)}
+    /* Socials */
+    .social-links{display:flex;gap:1.2rem;margin-top:1rem}
+    .social-links a{font-size:2.4rem}
+    /* Footer */
+    .site-footer{padding:2rem 1.6rem;color:var(--muted);text-align:center}
+    /* Responsif */
+    @media (max-width: 900px){
+      .navbar{display:none}
+      .burger-menu{display:flex}
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Aller au contenu</a>
+
+  <header class="header" id="siteHeader">
+    <a href="./index.html" class="logo" aria-label="Accueil Urban Step">Urban_Step</a>
+
+    <nav class="navbar" aria-label="Navigation principale (bureau)">
+      <a href="./index.html">Accueil</a>
+      <a href="./index.html#services">Services</a>
+      <a href="./index.html#apropos">À propos</a>
+      <a href="./contact.html" aria-current="page">Contact</a>
+    </nav>
+
+    <button class="burger-menu" id="burgerMenu"
+            aria-label="Ouvrir le menu"
+            aria-controls="mobileNav"
+            aria-expanded="false">
+      <span class="burger-line" aria-hidden="true"></span>
+      <span class="burger-line" aria-hidden="true"></span>
+      <span class="burger-line" aria-hidden="true"></span>
+    </button>
+  </header>
+
+  <div class="overlay" id="overlay" hidden></div>
+  <nav class="mobile-nav" id="mobileNav" aria-label="Navigation principale (mobile)" hidden>
+    <ul>
+      <li><a href="./index.html">Accueil</a></li>
+      <li><a href="./index.html#services">Services</a></li>
+      <li><a href="./index.html#apropos">À propos</a></li>
+      <li><a href="./contact.html" aria-current="page">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main id="main" tabindex="-1">
+    <section class="container">
+      <h1>Contact</h1>
+
+      <div id="formStatus" role="status" aria-live="polite"></div>
+
+      <form id="contactForm" action="#" method="post" novalidate>
+        <div class="form-row">
+          <label for="name">Nom *</label>
+          <input id="name" name="name" type="text" required autocomplete="name">
+        </div>
+        <div class="form-row">
+          <label for="email">Email *</label>
+          <input id="email" name="email" type="email" required autocomplete="email" aria-describedby="email-help">
+          <p id="email-help" class="form-help">Format attendu : nom@domaine.com</p>
+        </div>
+        <div class="form-row">
+          <label for="phone">Téléphone</label>
+          <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel">
+        </div>
+        <div class="form-row">
+          <label for="message">Message *</label>
+          <textarea id="message" name="message" rows="6" required></textarea>
+        </div>
+        <button type="submit" class="btn-primary">Envoyer</button>
+      </form>
+
+      <section class="socials" aria-labelledby="reseaux-title">
+        <h2 id="reseaux-title">Réseaux</h2>
+        <div class="social-links">
+          <a href="https://www.vinted.fr/member/230492161" class="fa-solid fa-shop"
+             target="_blank" rel="noopener" aria-label="Vinted"></a>
+          <a href="#" class="fab fa-instagram"
+             target="_blank" rel="noopener" aria-label="Instagram"></a>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="siteFooter">
+    <p>© <span id="year"></span> Urban_Step</p>
+  </footer>
+
+  <script>
+    const burgerBtn = document.getElementById('burgerMenu');
+    const mobileNav = document.getElementById('mobileNav');
+    const overlay = document.getElementById('overlay');
+    const header = document.getElementById('siteHeader');
+    const main = document.getElementById('main');
+    const footer = document.getElementById('siteFooter');
+    let lastFocused;
+
+    function getFocusable(container){
+      return [...container.querySelectorAll('a, button, input, textarea, select, [tabindex]:not([tabindex="-1"])')]
+        .filter(el => !el.disabled && el.offsetParent !== null);
+    }
+
+    function openMenu(){
+      mobileNav.hidden = false;
+      overlay.hidden = false;
+      burgerBtn.setAttribute('aria-expanded','true');
+      lastFocused = document.activeElement;
+      const focusables = getFocusable(mobileNav);
+      if(focusables.length) focusables[0].focus();
+      document.addEventListener('keydown', trapFocus);
+    }
+
+    function closeMenu(){
+      mobileNav.hidden = true;
+      overlay.hidden = true;
+      burgerBtn.setAttribute('aria-expanded','false');
+      if(lastFocused) lastFocused.focus();
+      document.removeEventListener('keydown', trapFocus);
+    }
+
+    function trapFocus(e){
+      if(e.key === 'Escape'){closeMenu(); return;}
+      if(e.key === 'Tab'){
+        const focusables = getFocusable(mobileNav);
+        if(focusables.length===0) return;
+        const first = focusables[0];
+        const last = focusables[focusables.length-1];
+        if(e.shiftKey && document.activeElement === first){
+          e.preventDefault(); last.focus();
+        } else if(!e.shiftKey && document.activeElement === last){
+          e.preventDefault(); first.focus();
+        }
+      }
+    }
+
+    burgerBtn.addEventListener('click', ()=>{
+      const expanded = burgerBtn.getAttribute('aria-expanded') === 'true';
+      expanded ? closeMenu() : openMenu();
+    });
+    overlay.addEventListener('click', closeMenu);
+    mobileNav.addEventListener('click', e=>{
+      if(e.target.tagName === 'A') closeMenu();
+    });
+
+    // Footer année dynamique
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Validation formulaire
+    document.getElementById('contactForm').addEventListener('submit', e=>{
+      e.preventDefault();
+      const form = e.target;
+      let valid = true;
+      let firstError = null;
+      const status = document.getElementById('formStatus');
+      status.textContent = '';
+      form.querySelectorAll('input,textarea').forEach(field=>{
+        field.removeAttribute('aria-invalid');
+        const error = field.parentNode.querySelector('.error-text');
+        if(error) error.remove();
+        if(field.hasAttribute('required') && !field.value.trim()){
+          valid=false;
+          field.setAttribute('aria-invalid','true');
+          if(!firstError) firstError=field;
+          const msg=document.createElement('p');
+          msg.className='error-text';
+          msg.textContent='Champ obligatoire';
+          field.parentNode.appendChild(msg);
+        }
+        if(field.type==='email' && field.value && !/.+@.+\\..+/.test(field.value)){
+          valid=false;
+          field.setAttribute('aria-invalid','true');
+          if(!firstError) firstError=field;
+          const msg=document.createElement('p');
+          msg.className='error-text';
+          msg.textContent='Veuillez saisir un email valide';
+          field.parentNode.appendChild(msg);
+        }
+      });
+      if(!valid){
+        status.textContent='Veuillez corriger les erreurs';
+        if(firstError) firstError.focus();
+      } else {
+        status.textContent='Message envoyé avec succès ✔';
+        form.reset();
+      }
+    });
+  </script>
+</body>
+</html>

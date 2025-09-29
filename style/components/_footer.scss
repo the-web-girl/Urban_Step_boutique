@@ -1,0 +1,56 @@
+.footer {
+    background:var(--black);
+    text-align: center;
+
+    .share {
+        padding: 1rem 0;
+        display: flex;
+        justify-content: center;
+
+        a {
+            height: 5rem;
+            width: 5rem;
+            line-height: 5rem;
+            font-size: 2rem;
+            color:#fff;
+            border:var(--border);
+            margin:.3rem;
+            border-radius: 50%;
+            text-decoration: none;
+
+            &:hover {
+                background-color: var(--main-color);
+            }
+        }
+    }
+
+    .links {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding:2rem 0;
+        gap:1rem;
+
+        a {
+            padding:.7rem 2rem;
+            color:#fff;
+            border:var(--border);
+            font-size: 2rem;
+
+            &:hover {
+                background:var(--main-color);
+            }
+        }
+    }
+
+    .credit {
+        font-size: 2rem;
+        color:#fff;
+        font-weight: lighter;
+        padding:1.5rem;
+
+        span {
+            color:var(--main-color);
+        }
+    }
+}

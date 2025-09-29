@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="">
+
+    <title>Urban_Step</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"/>
+
+    <link rel="stylesheet" href="./style/styles.css" />
+</head>
+<body>
+    <header class="header">
+
+        <a href="#" class="logo">
+            <img src="./assets/logo-Urban_Step.png" alt="Urban_Step"/>
+        </a>
+
+        <nav class="navbar">
+            <a href="./index.html">home</a>
+            <a href="#contact">contact</a>
+        </nav>
+
+        <!-- <div class="icons">
+            <div class="fas fa-search" id="search-btn"></div>
+            <div class="fas fa-shopping-cart" id="cart-btn"></div>
+            <div class="fas fa-bars" id="menu-btn"></div>
+        </div> -->
+
+    </header>
+
+    <!-- header section ends -->
+     
+
+      <!-- contact section starts  -->
+
+    <main class="container" id="main" tabindex="-1">
+        
+        <section aria-labelledby="contact-title" class="contact-section">
+            <div class="content ">
+                <h1 id="title" class="title">Urban_Step</h1>
+                <h2 id="contact-title">Formulaire de contact</h2>
+            </div>
+            
+            <form id="contact-form" class="contact-form" novalidate>
+                <div class="form-row">
+                    <label for="fname">Prénom</label>
+                    <input id="fname" name="fname" type="text" required />
+                </div>
+
+                <div class="form-row">
+                    <label for="lname">Nom</label>
+                    <input id="lname" name="lname" type="text" required />
+                </div>
+
+                <div class="form-row">
+                    <label for="phone">Téléphone</label>
+                    <input id="phone" name="phone" type="tel" inputmode="tel" pattern="^[0-9+()\s-]{6,}$" />
+                </div>
+
+                <div class="form-row">
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="email" required />
+                </div>
+
+                <div class="form-row">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="6" required></textarea>
+                </div>
+
+                <div class="form-row">
+                    <button type="submit" class="btn-primary">Envoyer</button>
+                </div>
+                <div id="form-status" role="status" aria-live="polite"></div>
+            </form>
+        </section>
+    </main>
+
+    <!-- contact section ends -->
+
+
+<!-- FOOTER START -->
+    <footer class="footer">
+
+        <div class="share">
+            <a href="https://www.vinted.fr/member/230492161" class="fa-solid fa-shop"><p class="sr-only" target="_blank">Vinted</p></a>
+            <!-- <a href="#" class="fab fa-youtube"><p class="sr-only"></p></a> -->
+            <a href="#" class="fab fa-instagram"><p class="sr-only" target="_blank">Instagram</p></a>
+            <!-- <a href="#" class="fab fa-linkedin"><p class="sr-only">LinkedIn</p></a> -->
+        </div>
+
+        <p class="credit">© 2025 created by <span>IntA11Y - Solutions </span>| all rights reserved</p>
+
+    </footer>
+<!-- FOOTER END -->
+
+  <!-- <script src="js/main.js"></script> -->
+</body>
+</html>

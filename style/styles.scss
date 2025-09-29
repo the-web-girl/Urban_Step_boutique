@@ -1,0 +1,21 @@
+// UTILS
+@import './utils/fonts';
+@import './utils/variables';
+
+// RESET
+@import './components/reset';
+
+// COMPONENTS
+@import './components/header';
+@import './components/footer';
+
+@import './components/home';
+@import './components/about';
+@import './components/gallery';
+@import './components/products';
+@import './components/review';
+
+@import './components/contact';
+
+// MEDIAQUERIES
+@import './components/mediaqueries';

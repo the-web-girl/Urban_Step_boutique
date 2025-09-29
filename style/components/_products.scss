@@ -1,0 +1,73 @@
+.products {
+    .box-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+        gap: 1.5rem;
+
+        .box {
+            text-align: center;
+            border: var(--white) 1px solid;
+            padding: 2rem;
+            box-shadow: 3px 5px 1px var(--main-color);
+
+            &:hover {
+                background-color: var(--main-dark);
+            }
+
+            .icons {
+
+                a {
+                    height: 5rem;
+                    width: 5rem;
+                    line-height: 5rem;
+                    font-size: 2rem;
+                    border:var(--border);
+                    color:#fff;
+                    margin:.3rem;
+
+                    &:hover {
+                        background-color: var(--main-color);
+                    }
+                }
+            }
+
+            .image {
+                padding: 2.5rem 0;
+
+                img {
+                    height: 25rem;
+                }
+            }
+
+            .content {
+                h3 {
+                    color: var(--white);
+                    font-size: 2.5rem;
+                }
+
+                p{
+                    color: var(--white);
+                    font-size: 1.8rem;
+                }
+
+                .stars {
+                    i {
+                        font-size: 1.7rem;
+                        color: var(--main-color);
+                    }
+                }
+
+                .price {
+                    color: var(--white);
+                    font-size: 2.5rem;
+
+                    span {
+                        text-decoration: line-through;
+                        font-weight: lighter;
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+        }
+    }
+}
