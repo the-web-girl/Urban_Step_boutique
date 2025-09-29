@@ -9,9 +9,7 @@ Le projet met l’accent sur l’**accessibilité numérique** (WCAG / RGAA), la
 ## 📂 Structure du projet
 
 ├── index.html # Page d'accueil (galerie produits, avis clients, etc.)
-
 ├── contact.html # Page de contact avec formulaire accessible
-
 │
 ├── assets/ # Images et visuels produits (PNG, JPG, WebP, SVG, logos)
 │
